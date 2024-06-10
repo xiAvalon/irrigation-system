@@ -17,7 +17,7 @@ function DataDisplay({ initialDate }) {
   const fetchData = useCallback(async (selectedDate) => {
     try {
       const formattedDate = formatDate(selectedDate);
-      const response = await axios.get(`https://localhost:5000/api/data/${formattedDate}`);
+      const response = await axios.get(`http://localhost:5000/api/data/${formattedDate}`);
       console.log(response.data); // Log the response data
       setData(response.data);
       setError(null);
