@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/irrigation-system/static/css/main.15276b44.css",
-    "main.js": "/irrigation-system/static/js/main.a4a930fc.js",
+    "main.js": "/irrigation-system/static/js/main.725b1c3b.js",
     "static/js/453.996e5f0c.chunk.js": "/irrigation-system/static/js/453.996e5f0c.chunk.js",
     "static/media/logo.svg": "/irrigation-system/static/media/logo.d3bbfb8c0d9608e08d93180d764071ee.svg",
     "index.html": "/irrigation-system/index.html",
     "main.15276b44.css.map": "/irrigation-system/static/css/main.15276b44.css.map",
-    "main.a4a930fc.js.map": "/irrigation-system/static/js/main.a4a930fc.js.map",
+    "main.725b1c3b.js.map": "/irrigation-system/static/js/main.725b1c3b.js.map",
     "453.996e5f0c.chunk.js.map": "/irrigation-system/static/js/453.996e5f0c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.15276b44.css",
-    "static/js/main.a4a930fc.js"
+    "static/js/main.725b1c3b.js"
   ]
 }
