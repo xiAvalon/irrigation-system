@@ -4,6 +4,7 @@ import { useTable, useBlockLayout } from 'react-table';
 import './DataDisplay.css';
 
 function DataDisplay({ initialDate }) {
+  const url = "https://irrigation-system-6abs.onrender.com";
   const [date, setDate] = useState(initialDate || '');
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
@@ -18,7 +19,7 @@ function DataDisplay({ initialDate }) {
     try {
       const formattedDate = formatDate(selectedDate);
       // const response = await axios.get(`${process.env.API_URL}/api/data/${formattedDate}`);
-      const response = await axios.get(`http://localhost:5000/api/data/${formattedDate}`);
+      const response = await axios.get(url + `/data/${formattedDate}`);
       console.log(response.data); // Log the response data
       setData(response.data);
       setError(null);

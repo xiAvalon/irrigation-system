@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const { Pool } = require('pg');
+const path = require('path');
 
 const app = express();
 const port = 5000;
@@ -16,13 +17,9 @@ const pool = new Pool({
     port: 5432,
 });
 
-// Root route handler
-app.get('/', (req, res) => {
-  res.send('Welcome to the irrigation data API!');
-});
+
 
 // Data retrieval route handler
-  
 app.get('/api/data/:date', async (req, res) => {
   const { date } = req.params;
   console.log("Date:", date);
@@ -40,6 +37,52 @@ app.get('/api/data/:date', async (req, res) => {
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server is running http://0.0.0.0:${port}`);
 });
+
+
+
+
+// const express = require('express');
+// const cors = require('cors');
+// const { Pool } = require('pg');
+
+// const app = express();
+// const port = 5000;
+
+// app.use(cors());
+// app.use(express.json());
+
+// const pool = new Pool({
+//     user: 'postgres',
+//     host: 'localhost',
+//     database: 'work',
+//     password: 'imAvalon76',
+//     port: 5432,
+// });
+
+// // Root route handler
+// app.get('/', (req, res) => {
+//   res.send('Welcome to the irrigation data API!');
+// });
+
+// // Data retrieval route handler
+  
+// app.get('/api/data/:date', async (req, res) => {
+//   const { date } = req.params;
+//   console.log("Date:", date);
+//   const tableName = `"irrigation_data_${date}"`; // Enclose table name in double quotes
+
+//   try {
+//     const result = await pool.query(`SELECT * FROM ${tableName} ORDER BY id`); // Ensure data is ordered by ID
+//     res.json(result.rows);
+//   } catch (error) {
+//     console.error('Error fetching data:', error.stack); // Log the full error stack
+//     res.status(500).json({ error: 'Internal Server Error', details: error.message });
+//   }
+// });
+
+// app.listen(port, '0.0.0.0', () => {
+//   console.log(`Server is running http://0.0.0.0:${port}`);
+// });
 
 // // Import required modules
 // const express = require('express');
