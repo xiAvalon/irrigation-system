@@ -34,41 +34,56 @@
 } */
 .data-display-container {
     margin: 25px;
-  }
+}
   
-  .table-container {
+.table-container {
     width: 100%;
     overflow-x: auto; /* Enable horizontal scrolling if the table is too wide */
-  }
+}
   
-  .data-table {
+.data-table {
     width: 100%;
     /* border-collapse: collapse; */
     table-layout: fixed; /* Automatic table layout for consistency */
-  }
+}
   
-  .data-table th,
-  .data-table td {
+.data-table th,
+.data-table td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
     white-space: wrap; /* Prevent wrapping of table cell content */
     position: relative; /* Required for the resizer */
-  }
+}
   
-  .data-table th {
+.data-table th {
     background-color: #282c34;
-  }
+}
   
-  .data-table tr:nth-child(even) {
+.data-table tr:nth-child(even) {
     background-color: #282c34;
-  }
+}
   
-  .data-table tr:hover {
+.data-table tr:hover {
     background-color: #9b9a9a;
-  }
+}
   
-  .resizer {
+.data-table .parameter-column {
+  width: 400px; /* Set the fixed width for the parameter column */
+  min-width: 400px; /* Ensure the column does not shrink below this width */
+  max-width: 400px;
+  padding-right: 20px; /* Add padding for more space */
+  text-align: left; /* Align text to the left */
+  white-space: normal; /* Allow wrapping of text */
+  word-wrap: break-word; /* Break words if they are too long */
+}
+
+.data-table .time-column {
+  width: calc((100% - 400px) / 24); /* Distribute remaining width equally among the time columns */
+  min-width: 100px; /* Ensure each time column has a minimum width */
+}
+
+.resizer {
     position: absolute;
     right: 0;
     top: 0;
