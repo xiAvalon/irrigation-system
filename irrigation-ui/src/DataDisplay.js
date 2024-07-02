@@ -309,8 +309,9 @@ function DataDisplay({ initialDate }) {
   const [error, setError] = useState(null);
 
   const formatDate = useCallback((date) => {
-    if (!date) return '';
+    if (!date) throw '';
     const [year, month, day] = date.split('-');
+    if (!year || !month || !day) throw '';
     return `${year}-${month}-${day}`;
   }, []);
 
