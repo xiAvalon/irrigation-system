@@ -14,6 +14,7 @@ app.use(cors({
 app.use(express.json());
 
 const pool = new Pool({
+    ssl: process.env.DB_SSL === "true",
     user: process.env.DB_USER || 'postgres',
     host: process.env.DB_HOST || 'localhost',
     database: process.env.DB_NAME || 'work',
