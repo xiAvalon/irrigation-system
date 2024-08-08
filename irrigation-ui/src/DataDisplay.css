@@ -1,37 +1,3 @@
-/* .data-display-container {
-    margin: 20px;
-}
-  
-  .table-container {
-    width: 100%;
-    overflow-x: auto; /* Enable horizontal scrolling if the table is too wide */
-/* } */
-  
-  /* .data-table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed; /* Make the table layout fixed for consistent column widths */
-/* } */
-  
-  /* .data-table th,
-  .data-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-    white-space: nowrap; /* Prevent wrapping of table cell content */
-/* } */
-  
-  /* .data-table th {
-    background-color: #f2f2f2;
-}
-  
-  .data-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-} */
-  
-  /* .data-table tr:hover {
-    background-color: #ddd;
-} */
 .data-display-container {
     margin: 25px;
 }
